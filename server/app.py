@@ -11,6 +11,7 @@ import os
 from typing import Any, Dict, Optional
 
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 from pydantic import BaseModel, Field
 
 from agentguard_gym.environment import AgentGuardEnvironment
@@ -28,6 +29,11 @@ class ResetBody(BaseModel):
 
 class StepBody(BaseModel):
     action: Dict[str, Any]
+
+
+@app.get("/")
+def root() -> RedirectResponse:
+    return RedirectResponse(url="/docs")
 
 
 @app.post("/reset")
