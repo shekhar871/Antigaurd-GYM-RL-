@@ -13,8 +13,8 @@ from __future__ import annotations
 import os
 from typing import Any, Dict, Optional
 
-from fastapi import FastAPI
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi import Body, FastAPI
+from fastapi.responses import HTMLResponse
 from pydantic import BaseModel, Field
 
 from agentguard_gym.environment import AgentGuardEnvironment
@@ -617,7 +617,9 @@ def web_ui() -> HTMLResponse:
 
 
 @app.post("/reset")
-def http_reset(body: ResetBody) -> Dict[str, Any]:
+def http_reset(body: Optional[ResetBody] = Body(default=None)) -> Dict[str, Any]:
+    if body is None:
+        body = ResetBody()
     obs = _env.reset(seed=body.seed, episode_id=body.episode_id, task=body.task)
     return {"observation": obs.model_dump(mode="json"), "reward": None, "done": False}
 
