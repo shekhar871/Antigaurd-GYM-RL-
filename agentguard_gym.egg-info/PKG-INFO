@@ -14,9 +14,7 @@ Requires-Dist: httpx>=0.25.0; extra == "dev"
 Requires-Dist: pytest>=7.0; extra == "dev"
 
 ---
-
-## title: AgentGuard-Gym
-
+title: AgentGuard-Gym
 emoji: 🛡️
 colorFrom: blue
 colorTo: red
@@ -24,8 +22,8 @@ sdk: docker
 pinned: false
 license: bsd-3-clause
 tags:
-
-- openenv
+  - openenv
+---
 
 # AgentGuard-Gym
 
