@@ -1,0 +1,43 @@
+Validating OpenEnv environment in 
+/Users/shekharjadhav/Downloads/SCALAR/agentguard-gy
+m...
+✓ Found OpenEnv environment: agentguard-gym
+✓ Authenticated as: hello9201
+Preparing files for Hugging Face deployment (with 
+web interface)...
+✓ Updated Dockerfile: enabled web interface
+✓ Updated README with HF Space frontmatter
+Creating/verifying space: 
+hello9201/agentguard-gym-openenv
+⚠ Space creation: (Request ID: 
+Root=1-69d2afd6-2e1192de5abace634eabc862;86528e02-a
+216-49b9-ac95-83e3384095c1)
+
+403 Forbidden: You don't have the rights to create 
+a space under the namespace "hello9201".
+Cannot access content at: 
+https://huggingface.co/api/repos/create.
+Make sure your token has the correct permissions.
+Uploading files to 
+hello9201/agentguard-gym-openenv...
+/Users/shekharjadhav/Downloads/SCALAR/agentguard-gym/.venv/lib/python3.11/site-packages/huggingface_hub/hf_api.py:10509: UserWarning: Warnings while validating metadata in README.md:
+- empty or missing yaml metadata in repo card
+  warnings.warn(f"Warnings while validating metadata in README.md:\n{message}")
+✗ Upload failed: 404 Client Error. (Request ID: 
+Root=1-69d2afd8-64e686a84c7d07755b7e1597;78980a6e-b
+044-4339-87ec-15cd8194552e)
+
+Repository Not Found for url: 
+https://huggingface.co/api/spaces/hello9201/agentgu
+ard-gym-openenv/preupload/main.
+Please make sure you specified the correct 
+`repo_id` and `repo_type`.
+If you are trying to access a private or gated 
+repo, make sure you are authenticated and your 
+token has the required permissions.
+For more details, see 
+https://huggingface.co/docs/huggingface_hub/authent
+ication
+Note: Creating a commit assumes that the repo 
+already exists on the Huggingface Hub. Please use 
+`create_repo` if it's not the case.

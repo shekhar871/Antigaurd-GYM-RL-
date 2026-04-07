@@ -1,0 +1,26 @@
+Validating OpenEnv environment in 
+/Users/shekharjadhav/Downloads/SCALAR/agentguard-gy
+m...
+✓ Found OpenEnv environment: agentguard-gym
+✓ Authenticated as: hello9201
+Preparing files for Hugging Face deployment (with 
+web interface)...
+✓ Updated Dockerfile: enabled web interface
+✓ Updated README with HF Space frontmatter
+Creating/verifying space: 
+hello9201/agentguard-gym-openenv
+✓ Space hello9201/agentguard-gym-openenv is ready
+Uploading files to 
+hello9201/agentguard-gym-openenv...
+/Users/shekharjadhav/Downloads/SCALAR/agentguard-gym/.venv/lib/python3.11/site-packages/huggingface_hub/hf_api.py:10509: UserWarning: Warnings while validating metadata in README.md:
+- empty or missing yaml metadata in repo card
+  warnings.warn(f"Warnings while validating metadata in README.md:\n{message}")
+✓ Upload completed successfully
+Space URL: 
+https://huggingface.co/spaces/hello9201/agentguard-
+gym-openenv
+
+✓ Deployment complete!
+Visit your space at: 
+https://huggingface.co/spaces/hello9201/agentguard-
+gym-openenv
