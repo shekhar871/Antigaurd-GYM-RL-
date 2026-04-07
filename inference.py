@@ -52,7 +52,7 @@ def log_step(step: int, action: str, reward: float, done: bool, error: Optional[
 def log_end(success: bool, steps: int, score: float, rewards: List[float]) -> None:
     joined = ",".join(f"{r:.2f}" for r in rewards)
     print(
-        f"[END] success={str(success).lower()} steps={steps} score={score:.3f} rewards={joined}",
+        f"[END] success={str(success).lower()} steps={steps} score={score:.2f} rewards={joined}",
         flush=True,
     )
 
@@ -146,12 +146,8 @@ def run_task(task: CyberTaskType, client: OpenAI) -> Tuple[bool, int, float, Lis
 
 def main() -> None:
     client = _client()
-    aggregate: List[float] = []
     for task in TASK_ORDER:
-        _success, _steps, score, _rewards = run_task(task, client)
-        aggregate.append(score)
-    overall = sum(aggregate) / len(aggregate)
-    print(f"[SUMMARY] benchmark={BENCHMARK} mean_task_score={overall:.2f}", flush=True)
+        run_task(task, client)
 
 
 if __name__ == "__main__":
